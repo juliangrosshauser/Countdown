@@ -43,6 +43,12 @@
 		B908ECA71BD1AAD7004C1107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B908ECAA1BD1AAD7004C1107 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B908ECAC1BD1AAD7004C1107 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9C0519F1BD2FBFE0046AD70 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		B9C051A11BD2FBFE0046AD70 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		B9C051A31BD2FBFE0046AD70 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		B9C051A61BD2FBFE0046AD70 /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		B9C051AD1BD2FBFE0046AD70 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 				B908EC9C1BD1AACF004C1107 /* CountdownTests */,
 				B908EC951BD1AAC7004C1107 /* CountdownUITests */,
 				B908EC651BD1A9AE004C1107 /* Products */,
+				B9C0519C1BD2FBFE0046AD70 /* Configurations */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +172,52 @@
 				B908ECAC1BD1AAD7004C1107 /* AppDelegate.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		B9C0519C1BD2FBFE0046AD70 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B9C0519E1BD2FBFE0046AD70 /* Base */,
+				B9C051AB1BD2FBFE0046AD70 /* iOS */,
+			);
+			name = Configurations;
+			path = Carthage/Checkouts/xcconfigs;
+			sourceTree = "<group>";
+		};
+		B9C0519E1BD2FBFE0046AD70 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B9C0519F1BD2FBFE0046AD70 /* Common.xcconfig */,
+				B9C051A01BD2FBFE0046AD70 /* Configurations */,
+				B9C051A51BD2FBFE0046AD70 /* Targets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B9C051A01BD2FBFE0046AD70 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				B9C051A11BD2FBFE0046AD70 /* Debug.xcconfig */,
+				B9C051A31BD2FBFE0046AD70 /* Release.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		B9C051A51BD2FBFE0046AD70 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				B9C051A61BD2FBFE0046AD70 /* Application.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		B9C051AB1BD2FBFE0046AD70 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */,
+				B9C051AD1BD2FBFE0046AD70 /* iOS-Base.xcconfig */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +399,7 @@
 /* Begin XCBuildConfiguration section */
 		B908EC8A1BD1A9AF004C1107 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051A11BD2FBFE0046AD70 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -391,6 +445,7 @@
 		};
 		B908EC8B1BD1A9AF004C1107 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051A31BD2FBFE0046AD70 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -429,6 +484,7 @@
 		};
 		B908EC8D1BD1A9AF004C1107 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
@@ -440,6 +496,7 @@
 		};
 		B908EC8E1BD1A9AF004C1107 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
@@ -451,6 +508,7 @@
 		};
 		B908EC901BD1A9AF004C1107 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
@@ -463,6 +521,7 @@
 		};
 		B908EC911BD1A9AF004C1107 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
@@ -475,6 +534,7 @@
 		};
 		B908EC931BD1A9AF004C1107 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -487,6 +547,7 @@
 		};
 		B908EC941BD1A9AF004C1107 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -516,6 +577,7 @@
 				B908EC8E1BD1A9AF004C1107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B908EC8F1BD1A9AF004C1107 /* Build configuration list for PBXNativeTarget "CountdownTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +586,7 @@
 				B908EC911BD1A9AF004C1107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B908EC921BD1A9AF004C1107 /* Build configuration list for PBXNativeTarget "CountdownUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +595,7 @@
 				B908EC941BD1A9AF004C1107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
