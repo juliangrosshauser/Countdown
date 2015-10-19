@@ -15,6 +15,7 @@
 		B943787B1BD5859400843636 /* Timepiece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B943787A1BD5859400843636 /* Timepiece.framework */; };
 		B94378801BD5860E00843636 /* Timepiece.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B943787F1BD5860E00843636 /* Timepiece.framework.dSYM */; };
 		B94378821BD5866800843636 /* CountdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94378811BD5866800843636 /* CountdownController.swift */; };
+		B94378841BD587EE00843636 /* BirthdayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94378831BD587EE00843636 /* BirthdayController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B943787A1BD5859400843636 /* Timepiece.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Timepiece.framework; path = Carthage/Build/iOS/Timepiece.framework; sourceTree = "<group>"; };
 		B943787F1BD5860E00843636 /* Timepiece.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Timepiece.framework.dSYM; path = Carthage/Build/iOS/Timepiece.framework.dSYM; sourceTree = "<group>"; };
 		B94378811BD5866800843636 /* CountdownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownController.swift; sourceTree = "<group>"; };
+		B94378831BD587EE00843636 /* BirthdayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayController.swift; sourceTree = "<group>"; };
 		B9C0519F1BD2FBFE0046AD70 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		B9C051A11BD2FBFE0046AD70 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		B9C051A31BD2FBFE0046AD70 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				B908ECAC1BD1AAD7004C1107 /* AppDelegate.swift */,
 				B94378811BD5866800843636 /* CountdownController.swift */,
+				B94378831BD587EE00843636 /* BirthdayController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			files = (
 				B908ECB11BD1AAD7004C1107 /* AppDelegate.swift in Sources */,
 				B94378821BD5866800843636 /* CountdownController.swift in Sources */,
+				B94378841BD587EE00843636 /* BirthdayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
