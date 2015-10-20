@@ -12,11 +12,13 @@ class CountdownController: UIViewController {
 
     //MARK: Properties
 
+    private let viewModel: CountdownViewModel
     private let userDefaults: NSUserDefaults
 
     //MARK: Initialization
 
-    init(userDefaults: NSUserDefaults) {
+    init(viewModel: CountdownViewModel, userDefaults: NSUserDefaults) {
+        self.viewModel = viewModel
         self.userDefaults = userDefaults
         super.init(nibName: nil, bundle: nil)
     }
