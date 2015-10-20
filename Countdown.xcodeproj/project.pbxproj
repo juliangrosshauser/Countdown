@@ -12,6 +12,7 @@
 		B908ECAD1BD1AAD7004C1107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B908ECA51BD1AAD7004C1107 /* Assets.xcassets */; };
 		B908ECAE1BD1AAD7004C1107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B908ECA61BD1AAD7004C1107 /* LaunchScreen.storyboard */; };
 		B908ECB11BD1AAD7004C1107 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B908ECAC1BD1AAD7004C1107 /* AppDelegate.swift */; };
+		B92C7FDD1BD6E44D00BA939F /* CountdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C7FDC1BD6E44D00BA939F /* CountdownViewModel.swift */; };
 		B943787B1BD5859400843636 /* Timepiece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B943787A1BD5859400843636 /* Timepiece.framework */; };
 		B94378801BD5860E00843636 /* Timepiece.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B943787F1BD5860E00843636 /* Timepiece.framework.dSYM */; };
 		B94378821BD5866800843636 /* CountdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94378811BD5866800843636 /* CountdownController.swift */; };
@@ -61,6 +62,7 @@
 		B908ECA71BD1AAD7004C1107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B908ECAA1BD1AAD7004C1107 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B908ECAC1BD1AAD7004C1107 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B92C7FDC1BD6E44D00BA939F /* CountdownViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownViewModel.swift; sourceTree = "<group>"; };
 		B943787A1BD5859400843636 /* Timepiece.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Timepiece.framework; path = Carthage/Build/iOS/Timepiece.framework; sourceTree = "<group>"; };
 		B943787F1BD5860E00843636 /* Timepiece.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Timepiece.framework.dSYM; path = Carthage/Build/iOS/Timepiece.framework.dSYM; sourceTree = "<group>"; };
 		B94378811BD5866800843636 /* CountdownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				B908ECAC1BD1AAD7004C1107 /* AppDelegate.swift */,
 				B94378811BD5866800843636 /* CountdownController.swift */,
+				B92C7FDC1BD6E44D00BA939F /* CountdownViewModel.swift */,
 				B94378831BD587EE00843636 /* BirthdayController.swift */,
 			);
 			path = Source;
@@ -405,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B92C7FDD1BD6E44D00BA939F /* CountdownViewModel.swift in Sources */,
 				B908ECB11BD1AAD7004C1107 /* AppDelegate.swift in Sources */,
 				B94378821BD5866800843636 /* CountdownController.swift in Sources */,
 				B94378841BD587EE00843636 /* BirthdayController.swift in Sources */,
