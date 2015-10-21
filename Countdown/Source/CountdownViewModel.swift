@@ -13,6 +13,7 @@ class CountdownViewModel {
     //MARK: Properties
 
     private let userDefaults: NSUserDefaults
+    private(set) var age: Double?
 
     //MARK: Initialization
 
