@@ -14,6 +14,12 @@ class BirthdayController: UIViewController {
 
     private let viewModel: CountdownViewModel
 
+    private let datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .Date
+        return datePicker
+    }()
+
     //MARK: Initialization
 
     init(viewModel: CountdownViewModel) {
@@ -23,5 +29,17 @@ class BirthdayController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    //MARK: UIViewController
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(datePicker)
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        datePicker.center = view.center
     }
 }
