@@ -1,0 +1,7 @@
+[
+  "-project", "Countdown.xcodeproj",
+  "-scheme", "Countdown",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-destination", "name=iPhone 6s Plus"
+]
