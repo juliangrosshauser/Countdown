@@ -31,7 +31,7 @@ class CountdownController: UIViewController {
         super.viewDidAppear(animated)
 
         if viewModel.age == nil {
-            showViewController(BirthdayController(viewModel: viewModel), sender: self)
+            showViewController(UINavigationController(rootViewController: BirthdayController(viewModel: viewModel)), sender: self)
         }
     }
 }
