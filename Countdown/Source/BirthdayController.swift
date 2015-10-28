@@ -43,6 +43,7 @@ class BirthdayController: UIViewController {
 
         if let birthday = viewModel.birthday {
             navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancel:")
+            datePicker.setDate(birthday, animated: true)
         }
     }
 
