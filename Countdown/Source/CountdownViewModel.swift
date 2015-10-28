@@ -22,7 +22,7 @@ class CountdownViewModel {
         }
 
         set {
-            userDefaults.setObject(birthday, forKey: CountdownViewModel.birthdayKey)
+            userDefaults.setObject(newValue, forKey: CountdownViewModel.birthdayKey)
         }
     }
 
