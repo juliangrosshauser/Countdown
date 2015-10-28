@@ -40,6 +40,10 @@ class BirthdayController: UIViewController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "save:")
         view.addSubview(datePicker)
+
+        if let birthday = viewModel.birthday {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancel:")
+        }
     }
 
     override func viewWillLayoutSubviews() {
@@ -52,6 +56,11 @@ class BirthdayController: UIViewController {
     @objc
     private func save(sender: UIBarButtonItem) {
         viewModel.birthday = datePicker.date
+        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    @objc
+    private func cancel(sender: UIBarButtonItem) {
         presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
