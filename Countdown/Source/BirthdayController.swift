@@ -38,11 +38,20 @@ class BirthdayController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: "save:")
         view.addSubview(datePicker)
     }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         datePicker.center = view.center
+    }
+
+    //MARK: Button Actions
+
+    @objc
+    private func save(sender: UIBarButtonItem) {
+        viewModel.birthday = datePicker.date
+        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
