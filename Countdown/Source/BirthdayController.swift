@@ -28,6 +28,7 @@ class BirthdayController: UIViewController {
     init(viewModel: CountdownViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        title = NSLocalizedString("Birthday", comment: "Title of birthday date picker")
     }
 
     required init?(coder aDecoder: NSCoder) {
