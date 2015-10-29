@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        window?.rootViewController = CountdownController(viewModel: CountdownViewModel(userDefaults: NSUserDefaults.standardUserDefaults()))
+        let viewModel = CountdownViewModel(userDefaults: NSUserDefaults.standardUserDefaults())
+        let countdownController = CountdownController(viewModel: viewModel)
+        window?.rootViewController = UINavigationController(rootViewController: countdownController)
         window?.makeKeyAndVisible()
         return true
     }
