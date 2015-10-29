@@ -34,4 +34,16 @@ class CountdownController: UIViewController {
             showViewController(UINavigationController(rootViewController: BirthdayController(viewModel: viewModel)), sender: self)
         }
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Settings", comment: "Settings Button Label"), style: .Plain, target: self, action: "showSettings:")
+    }
+
+    //MARK: Button Actions
+
+    @objc
+    private func showSettings(sender: UIBarButtonItem) {
+        showViewController(UINavigationController(rootViewController: BirthdayController(viewModel: viewModel)), sender: self)
+    }
 }
