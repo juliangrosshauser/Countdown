@@ -13,6 +13,13 @@ class CountdownController: UIViewController {
     //MARK: Properties
 
     private let viewModel: CountdownViewModel
+    private let ageLabel: UILabel = {
+        let ageLabel = UILabel()
+        ageLabel.font = UIFont.monospacedDigitSystemFontOfSize(UIFont.systemFontSize(), weight: UIFontWeightRegular)
+        ageLabel.textColor = .blackColor()
+        ageLabel.textAlignment = .Center
+        return ageLabel
+    }()
 
     //MARK: Initialization
 
@@ -38,6 +45,12 @@ class CountdownController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Settings", comment: "Settings Button Label"), style: .Plain, target: self, action: "showSettings:")
+        view.addSubview(ageLabel)
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        ageLabel.center = view.center
     }
 
     //MARK: Button Actions
