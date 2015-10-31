@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ReactiveCocoa
 
 class CountdownViewModel {
 
@@ -14,7 +15,7 @@ class CountdownViewModel {
 
     private static let birthdayKey = "CountdownBirthdayKey"
     private let userDefaults: NSUserDefaults
-    private(set) var age: Double?
+    let age = MutableProperty<Double>(0)
 
     var birthday: NSDate? {
         get {
