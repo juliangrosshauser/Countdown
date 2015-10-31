@@ -40,6 +40,8 @@ class CountdownViewModel {
         if birthday != nil {
             startTimer.apply().start()
         }
+
+        age <~ startTimer.values.map { [unowned self] _ in self.ageForBirthday(self.birthday!) }
     }
 
     //MARK: Age Calculation
