@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class CountdownController: UIViewController {
 
@@ -46,6 +47,11 @@ class CountdownController: UIViewController {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Settings", comment: "Settings Button Label"), style: .Plain, target: self, action: "showSettings:")
         view.addSubview(ageLabel)
+
+        viewModel.age.producer.observeOn(UIScheduler()).startWithNext { [unowned self] age in
+            self.ageLabel.text = String(format: "%.12f", age)
+            self.ageLabel.sizeToFit()
+        }
     }
 
     override func viewWillLayoutSubviews() {
