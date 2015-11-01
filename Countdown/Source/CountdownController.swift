@@ -48,7 +48,8 @@ class CountdownController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Settings", comment: "Settings Button Label"), style: .Plain, target: self, action: "showSettings:")
         view.addSubview(ageLabel)
 
-        viewModel.age.producer.observeOn(UIScheduler()).startWithNext { [unowned self] age in
+        // Skip initial value
+        viewModel.age.producer.observeOn(UIScheduler()).skip(1).startWithNext { [unowned self] age in
             self.ageLabel.text = String(format: "%.12f", age)
             self.ageLabel.sizeToFit()
         }
