@@ -27,6 +27,8 @@
 		B9E60FA01BE81A930054172D /* CountdownKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E60F9E1BE81A930054172D /* CountdownKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9E60FA31BE81E480054172D /* CountdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C7FDC1BD6E44D00BA939F /* CountdownViewModel.swift */; };
 		B9E60FA41BE81E4C0054172D /* NSCalendar+Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99AF4231BE18EF100F5C559 /* NSCalendar+Countdown.swift */; };
+		B9E60FA51BE81EF20054172D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2941BE425C600BE94A1 /* Result.framework */; };
+		B9E60FA61BE81EF40054172D /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2931BE425C600BE94A1 /* ReactiveCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +164,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E60FA51BE81EF20054172D /* Result.framework in Frameworks */,
+				B9E60FA61BE81EF40054172D /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,6 +885,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -902,6 +910,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
