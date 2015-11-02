@@ -10,7 +10,7 @@ import Foundation
 
 public extension NSCalendar {
 
-    public func daysInYear(date: NSDate) -> Int? {
+    public func daysInYear(date: NSDate) -> Int {
         let dateComponents = components(.Year, fromDate: date)
         let monthsInYear = rangeOfUnit(.Month, inUnit: .Year, forDate: date).length
         var days = 0
@@ -20,7 +20,8 @@ public extension NSCalendar {
             if let monthInYear = dateFromComponents(dateComponents) {
                 days += rangeOfUnit(.Day, inUnit: .Month, forDate: monthInYear).length
             } else {
-                return nil
+                // In case of an error, simply return 365 days
+                return 365
             }
         }
 

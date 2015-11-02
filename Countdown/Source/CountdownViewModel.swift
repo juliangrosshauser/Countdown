@@ -52,7 +52,7 @@ public class CountdownViewModel {
         let now = NSDate()
         let ageComponents = calendar.components([.Year, .Day, .Second, .Nanosecond], fromDate: birthday, toDate: now, options: [])
 
-        let daysInYear = Double(calendar.daysInYear(now) ?? 365)
+        let daysInYear = Double(calendar.daysInYear(now))
         let hoursInDay = Double(calendar.rangeOfUnit(.Hour, inUnit: .Day, forDate: now).length)
         let minutesInHour = Double(calendar.rangeOfUnit(.Minute, inUnit: .Hour, forDate: now).length)
         let secondsInMinute = Double(calendar.rangeOfUnit(.Second, inUnit: .Minute, forDate: now).length)
