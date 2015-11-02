@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension NSCalendar {
+public extension NSCalendar {
 
-    func daysInYear(date: NSDate) -> Int? {
+    public func daysInYear(date: NSDate) -> Int? {
         let dateComponents = components(.Year, fromDate: date)
         let monthsInYear = rangeOfUnit(.Month, inUnit: .Year, forDate: date).length
         var days = 0
