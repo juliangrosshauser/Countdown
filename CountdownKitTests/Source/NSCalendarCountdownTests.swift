@@ -9,4 +9,4 @@
 import XCTest
 @testable import CountdownKit
 
-class CountdownKitTests: XCTestCase {}
+class NSCalendarCountdownTests: XCTestCase {}

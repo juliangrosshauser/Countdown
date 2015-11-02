@@ -23,7 +23,7 @@
 		B9E60F771BE819810054172D /* CountdownKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E60F6D1BE819810054172D /* CountdownKit.framework */; };
 		B9E60F821BE819810054172D /* CountdownKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E60F6D1BE819810054172D /* CountdownKit.framework */; };
 		B9E60F841BE819810054172D /* CountdownKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9E60F6D1BE819810054172D /* CountdownKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B9E60F991BE81A660054172D /* CountdownKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E60F971BE81A660054172D /* CountdownKitTests.swift */; };
+		B9E60F991BE81A660054172D /* NSCalendarCountdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E60F971BE81A660054172D /* NSCalendarCountdownTests.swift */; };
 		B9E60FA01BE81A930054172D /* CountdownKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E60F9E1BE81A930054172D /* CountdownKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9E60FA31BE81E480054172D /* CountdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C7FDC1BD6E44D00BA939F /* CountdownViewModel.swift */; };
 		B9E60FA41BE81E4C0054172D /* NSCalendar+Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99AF4231BE18EF100F5C559 /* NSCalendar+Countdown.swift */; };
@@ -131,7 +131,7 @@
 		B9E60F6D1BE819810054172D /* CountdownKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CountdownKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E60F761BE819810054172D /* CountdownKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountdownKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E60F951BE81A660054172D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9E60F971BE81A660054172D /* CountdownKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownKitTests.swift; sourceTree = "<group>"; };
+		B9E60F971BE81A660054172D /* NSCalendarCountdownTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCalendarCountdownTests.swift; sourceTree = "<group>"; };
 		B9E60F9C1BE81A930054172D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9E60F9E1BE81A930054172D /* CountdownKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownKit.h; sourceTree = "<group>"; };
 		B9E60FA11BE81CF30054172D /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
@@ -374,7 +374,7 @@
 		B9E60F961BE81A660054172D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B9E60F971BE81A660054172D /* CountdownKitTests.swift */,
+				B9E60F971BE81A660054172D /* NSCalendarCountdownTests.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -666,7 +666,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9E60F991BE81A660054172D /* CountdownKitTests.swift in Sources */,
+				B9E60F991BE81A660054172D /* NSCalendarCountdownTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
