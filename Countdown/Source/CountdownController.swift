@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CountdownKit
 import ReactiveCocoa
 
 class CountdownController: UIViewController {

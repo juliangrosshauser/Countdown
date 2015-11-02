@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CountdownKit
 import Timepiece
 
 class BirthdayController: UIViewController {

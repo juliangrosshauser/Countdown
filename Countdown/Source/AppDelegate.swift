@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CountdownKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
