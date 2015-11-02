@@ -9,16 +9,16 @@
 import Foundation
 import ReactiveCocoa
 
-class CountdownViewModel {
+public class CountdownViewModel {
 
     //MARK: Properties
 
     private static let birthdayKey = "CountdownBirthdayKey"
     private let userDefaults: NSUserDefaults
     private let startTimer: Action<Void, NSDate, NoError> = Action { timer(0.1, onScheduler: QueueScheduler()) }
-    let age = MutableProperty<Double>(0)
+    public let age = MutableProperty<Double>(0)
 
-    var birthday: NSDate? {
+    public var birthday: NSDate? {
         get {
             return userDefaults.objectForKey(CountdownViewModel.birthdayKey) as? NSDate
         }
@@ -34,7 +34,7 @@ class CountdownViewModel {
 
     //MARK: Initialization
 
-    init(userDefaults: NSUserDefaults) {
+    public init(userDefaults: NSUserDefaults) {
         self.userDefaults = userDefaults
 
         if birthday != nil {
