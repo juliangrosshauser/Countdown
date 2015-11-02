@@ -128,6 +128,8 @@
 		B9E60F971BE81A660054172D /* CountdownKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownKitTests.swift; sourceTree = "<group>"; };
 		B9E60F9C1BE81A930054172D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9E60F9E1BE81A930054172D /* CountdownKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownKit.h; sourceTree = "<group>"; };
+		B9E60FA11BE81CF30054172D /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
+		B9E60FA21BE81D080054172D /* iOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Framework.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				B9C051A61BD2FBFE0046AD70 /* Application.xcconfig */,
+				B9E60FA11BE81CF30054172D /* Framework.xcconfig */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			children = (
 				B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */,
 				B9C051AD1BD2FBFE0046AD70 /* iOS-Base.xcconfig */,
+				B9E60FA21BE81D080054172D /* iOS-Framework.xcconfig */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -867,6 +871,7 @@
 		};
 		B9E60F851BE819810054172D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9E60FA21BE81D080054172D /* iOS-Framework.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -887,6 +892,7 @@
 		};
 		B9E60F861BE819810054172D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9E60FA21BE81D080054172D /* iOS-Framework.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -907,6 +913,7 @@
 		};
 		B9E60F871BE819810054172D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -918,6 +925,7 @@
 		};
 		B9E60F881BE819810054172D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
