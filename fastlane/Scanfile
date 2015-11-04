@@ -1,0 +1,3 @@
+scheme "Countdown"
+open_report true
+clean true
