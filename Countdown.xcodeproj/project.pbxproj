@@ -997,6 +997,7 @@
 		};
 		B92BD2761BEAC28D00053B0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1008,6 +1009,7 @@
 		};
 		B92BD2771BEAC28D00053B0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1145,6 +1147,7 @@
 				B92BD2771BEAC28D00053B0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9E60F891BE819810054172D /* Build configuration list for PBXNativeTarget "CountdownKit" */ = {
 			isa = XCConfigurationList;
