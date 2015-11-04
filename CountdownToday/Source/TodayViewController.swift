@@ -10,14 +10,19 @@ import UIKit
 import NotificationCenter
 
 @objc(TodayViewController)
-class TodayViewController: UIViewController, NCWidgetProviding {
-    
+class TodayViewController: UIViewController {
+
     //MARK: UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
         preferredContentSize = CGSize(width: 0, height: 50)
     }
+}
+
+//MARK: NCWidgetProviding
+
+extension TodayViewController: NCWidgetProviding {
 
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
         completionHandler(.NoData)
