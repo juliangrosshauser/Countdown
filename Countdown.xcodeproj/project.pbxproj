@@ -30,10 +30,6 @@
 		B9E60FA41BE81E4C0054172D /* NSCalendar+Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99AF4231BE18EF100F5C559 /* NSCalendar+Countdown.swift */; };
 		B9E60FA51BE81EF20054172D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2941BE425C600BE94A1 /* Result.framework */; };
 		B9E60FA61BE81EF40054172D /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2931BE425C600BE94A1 /* ReactiveCocoa.framework */; };
-		B9E60FA71BE81FBF0054172D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2941BE425C600BE94A1 /* Result.framework */; };
-		B9E60FA81BE81FC20054172D /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2931BE425C600BE94A1 /* ReactiveCocoa.framework */; };
-		B9E60FA91BE81FDD0054172D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2941BE425C600BE94A1 /* Result.framework */; };
-		B9E60FAA1BE81FE00054172D /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2931BE425C600BE94A1 /* ReactiveCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,8 +169,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9E60FA71BE81FBF0054172D /* Result.framework in Frameworks */,
-				B9E60FA81BE81FC20054172D /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +201,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9E60F771BE819810054172D /* CountdownKit.framework in Frameworks */,
-				B9E60FA91BE81FDD0054172D /* Result.framework in Frameworks */,
-				B9E60FAA1BE81FE00054172D /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
