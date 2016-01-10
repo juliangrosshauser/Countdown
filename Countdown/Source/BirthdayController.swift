@@ -8,7 +8,6 @@
 
 import UIKit
 import CountdownKit
-import Timepiece
 
 class BirthdayController: UIViewController {
 
@@ -19,7 +18,12 @@ class BirthdayController: UIViewController {
     private let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .Date
-        datePicker.minimumDate = NSDate.date(year: 1900, month: 1, day: 1)
+        let components = NSDateComponents()
+        components.year = 1900
+        components.month = 1
+        components.day = 1
+        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian) ?? NSCalendar.currentCalendar()
+        datePicker.minimumDate = calendar.dateFromComponents(components)
         datePicker.maximumDate = NSDate()
         return datePicker
     }()

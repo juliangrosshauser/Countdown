@@ -15,8 +15,6 @@
 		B92BD26B1BEAC28C00053B0F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92BD26A1BEAC28C00053B0F /* NotificationCenter.framework */; };
 		B92BD2751BEAC28C00053B0F /* CountdownToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B92BD2691BEAC28C00053B0F /* CountdownToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B92BD2801BEAC3A400053B0F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BD27E1BEAC3A400053B0F /* TodayViewController.swift */; };
-		B943787B1BD5859400843636 /* Timepiece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B943787A1BD5859400843636 /* Timepiece.framework */; };
-		B94378801BD5860E00843636 /* Timepiece.framework.dSYM in Carthage - Copy Debug Symbols */ = {isa = PBXBuildFile; fileRef = B943787F1BD5860E00843636 /* Timepiece.framework.dSYM */; };
 		B94378821BD5866800843636 /* CountdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94378811BD5866800843636 /* CountdownController.swift */; };
 		B94378841BD587EE00843636 /* BirthdayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94378831BD587EE00843636 /* BirthdayController.swift */; };
 		B9AAC2951BE425C600BE94A1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2931BE425C600BE94A1 /* ReactiveCocoa.framework */; };
@@ -101,7 +99,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				B94378801BD5860E00843636 /* Timepiece.framework.dSYM in Carthage - Copy Debug Symbols */,
 				B9AAC2991BE4263900BE94A1 /* Result.framework.dSYM in Carthage - Copy Debug Symbols */,
 				B9AAC29A1BE4263900BE94A1 /* ReactiveCocoa.framework.dSYM in Carthage - Copy Debug Symbols */,
 			);
@@ -138,8 +135,6 @@
 		B92BD27C1BEAC3A400053B0F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B92BD27E1BEAC3A400053B0F /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		B92C7FDC1BD6E44D00BA939F /* CountdownViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountdownViewModel.swift; path = ../../Countdown/Source/CountdownViewModel.swift; sourceTree = "<group>"; };
-		B943787A1BD5859400843636 /* Timepiece.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Timepiece.framework; path = Carthage/Build/iOS/Timepiece.framework; sourceTree = "<group>"; };
-		B943787F1BD5860E00843636 /* Timepiece.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Timepiece.framework.dSYM; path = Carthage/Build/iOS/Timepiece.framework.dSYM; sourceTree = "<group>"; };
 		B94378811BD5866800843636 /* CountdownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownController.swift; sourceTree = "<group>"; };
 		B94378831BD587EE00843636 /* BirthdayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayController.swift; sourceTree = "<group>"; };
 		B99AF4231BE18EF100F5C559 /* NSCalendar+Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSCalendar+Countdown.swift"; path = "../../Countdown/Source/NSCalendar+Countdown.swift"; sourceTree = "<group>"; };
@@ -168,7 +163,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B943787B1BD5859400843636 /* Timepiece.framework in Frameworks */,
 				B9AAC2961BE425C600BE94A1 /* Result.framework in Frameworks */,
 				B9AAC2951BE425C600BE94A1 /* ReactiveCocoa.framework in Frameworks */,
 				B9E60F821BE819810054172D /* CountdownKit.framework in Frameworks */,
@@ -360,8 +354,6 @@
 				B9AAC2981BE425E700BE94A1 /* Result.framework.dSYM */,
 				B9AAC2931BE425C600BE94A1 /* ReactiveCocoa.framework */,
 				B9AAC2971BE425E700BE94A1 /* ReactiveCocoa.framework.dSYM */,
-				B943787A1BD5859400843636 /* Timepiece.framework */,
-				B943787F1BD5860E00843636 /* Timepiece.framework.dSYM */,
 				B92BD26A1BEAC28C00053B0F /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -704,7 +696,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Timepiece.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 			);
