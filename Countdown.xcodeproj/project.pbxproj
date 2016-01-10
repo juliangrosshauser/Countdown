@@ -553,6 +553,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9E60F891BE819810054172D /* Build configuration list for PBXNativeTarget "CountdownKit" */;
 			buildPhases = (
+				B9CA5B0B1C42D64200A783D3 /* Carthage - Compile Frameworks */,
 				B9E60F681BE819800054172D /* Sources */,
 				B9E60F691BE819800054172D /* Frameworks */,
 				B9E60F6A1BE819800054172D /* Headers */,
@@ -705,6 +706,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		B9CA5B0B1C42D64200A783D3 /* Carthage - Compile Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage - Compile Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ! -d \"$SRCROOT/Carthage/Build\" ]; then\n    carthage build --platform iOS --no-use-binaries\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
