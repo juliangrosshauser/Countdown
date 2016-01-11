@@ -15,6 +15,7 @@
 		B92BD26B1BEAC28C00053B0F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92BD26A1BEAC28C00053B0F /* NotificationCenter.framework */; };
 		B92BD2751BEAC28C00053B0F /* CountdownToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B92BD2691BEAC28C00053B0F /* CountdownToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B92BD2801BEAC3A400053B0F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BD27E1BEAC3A400053B0F /* TodayViewController.swift */; };
+		B93039011C444AB800E65FF2 /* NSDate+Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93039001C444AB800E65FF2 /* NSDate+Countdown.swift */; };
 		B94378821BD5866800843636 /* CountdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94378811BD5866800843636 /* CountdownController.swift */; };
 		B94378841BD587EE00843636 /* BirthdayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94378831BD587EE00843636 /* BirthdayController.swift */; };
 		B9AAC2951BE425C600BE94A1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AAC2931BE425C600BE94A1 /* ReactiveCocoa.framework */; };
@@ -131,6 +132,7 @@
 		B92BD27C1BEAC3A400053B0F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B92BD27E1BEAC3A400053B0F /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		B92C7FDC1BD6E44D00BA939F /* CountdownViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountdownViewModel.swift; path = ../../Countdown/Source/CountdownViewModel.swift; sourceTree = "<group>"; };
+		B93039001C444AB800E65FF2 /* NSDate+Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Countdown.swift"; sourceTree = "<group>"; };
 		B94378811BD5866800843636 /* CountdownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownController.swift; sourceTree = "<group>"; };
 		B94378831BD587EE00843636 /* BirthdayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayController.swift; sourceTree = "<group>"; };
 		B99AF4231BE18EF100F5C559 /* NSCalendar+Countdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSCalendar+Countdown.swift"; path = "../../Countdown/Source/NSCalendar+Countdown.swift"; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 			children = (
 				B9E60F9E1BE81A930054172D /* CountdownKit.h */,
 				B92C7FDC1BD6E44D00BA939F /* CountdownViewModel.swift */,
+				B93039001C444AB800E65FF2 /* NSDate+Countdown.swift */,
 				B99AF4231BE18EF100F5C559 /* NSCalendar+Countdown.swift */,
 			);
 			path = Source;
@@ -754,6 +757,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93039011C444AB800E65FF2 /* NSDate+Countdown.swift in Sources */,
 				B9E60FA31BE81E480054172D /* CountdownViewModel.swift in Sources */,
 				B9E60FA41BE81E4C0054172D /* NSCalendar+Countdown.swift in Sources */,
 			);

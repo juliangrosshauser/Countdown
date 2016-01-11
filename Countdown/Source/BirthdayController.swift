@@ -19,12 +19,7 @@ class BirthdayController: UIViewController {
         let datePicker = UIDatePicker()
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         datePicker.datePickerMode = .Date
-        let components = NSDateComponents()
-        components.year = 1900
-        components.month = 1
-        components.day = 1
-        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian) ?? NSCalendar.currentCalendar()
-        datePicker.minimumDate = calendar.dateFromComponents(components)
+        datePicker.minimumDate = NSDate.date(day: 1, month: 1, year: 1900)
         datePicker.maximumDate = NSDate()
         return datePicker
     }()
