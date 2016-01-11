@@ -17,6 +17,7 @@ class BirthdayController: UIViewController {
 
     private let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
         datePicker.datePickerMode = .Date
         let components = NSDateComponents()
         components.year = 1900
@@ -51,11 +52,9 @@ class BirthdayController: UIViewController {
             navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancel:")
             datePicker.setDate(birthday, animated: true)
         }
-    }
 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        datePicker.center = view.center
+        NSLayoutConstraint(item: datePicker, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
+        NSLayoutConstraint(item: datePicker, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
     }
 
     //MARK: Button Actions

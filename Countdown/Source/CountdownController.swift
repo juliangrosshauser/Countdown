@@ -17,6 +17,7 @@ class CountdownController: UIViewController {
     private let viewModel: CountdownViewModel
     private let ageLabel: UILabel = {
         let ageLabel = UILabel()
+        ageLabel.translatesAutoresizingMaskIntoConstraints = false
         ageLabel.font = UIFont.monospacedDigitSystemFontOfSize(UIFont.systemFontSize(), weight: UIFontWeightRegular)
         ageLabel.textColor = .blackColor()
         ageLabel.textAlignment = .Center
@@ -54,11 +55,9 @@ class CountdownController: UIViewController {
             self.ageLabel.text = String(format: "%.12f", age)
             self.ageLabel.sizeToFit()
         }
-    }
 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        ageLabel.center = view.center
+        NSLayoutConstraint(item: ageLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
+        NSLayoutConstraint(item: ageLabel, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
     }
 
     //MARK: Button Actions
