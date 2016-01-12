@@ -19,7 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let viewModel = CountdownViewModel(userDefaults: NSUserDefaults.standardUserDefaults())
+        guard let userDefaults = NSUserDefaults(suiteName: CountdownViewModel.UserDefaultsSuiteName) else {
+            fatalError("Can't initialize user defaults for app group")
+        }
+
+        let viewModel = CountdownViewModel(userDefaults: userDefaults)
         let countdownController = CountdownController(viewModel: viewModel)
         window?.rootViewController = UINavigationController(rootViewController: countdownController)
         window?.makeKeyAndVisible()
