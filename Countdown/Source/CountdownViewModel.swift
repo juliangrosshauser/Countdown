@@ -13,7 +13,7 @@ public class CountdownViewModel {
 
     //MARK: Properties
 
-    private static let birthdayKey = "CountdownBirthdayKey"
+    private static let BirthdayKey = "CountdownBirthdayKey"
     public static let UserDefaultsSuiteName = "group.com.juliangrosshauser.Countdown"
     private let userDefaults: NSUserDefaults
     private let startTimer: Action<Void, NSDate, NoError> = Action { timer(0.1, onScheduler: QueueScheduler()) }
@@ -21,11 +21,11 @@ public class CountdownViewModel {
 
     public var birthday: NSDate? {
         get {
-            return userDefaults.objectForKey(CountdownViewModel.birthdayKey) as? NSDate
+            return userDefaults.objectForKey(CountdownViewModel.BirthdayKey) as? NSDate
         }
 
         set {
-            userDefaults.setObject(newValue, forKey: CountdownViewModel.birthdayKey)
+            userDefaults.setObject(newValue, forKey: CountdownViewModel.BirthdayKey)
 
             if !startTimer.executing.value {
                 startTimer.apply().start()
