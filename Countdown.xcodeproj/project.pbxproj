@@ -140,6 +140,8 @@
 		B9AAC2941BE425C600BE94A1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		B9AAC2971BE425E700BE94A1 /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveCocoa.framework.dSYM; path = Carthage/Build/iOS/ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
 		B9AAC2981BE425E700BE94A1 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/iOS/Result.framework.dSYM; sourceTree = "<group>"; };
+		B9B8E4391C45A77600B15F48 /* Countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Countdown.entitlements; sourceTree = "<group>"; };
+		B9B8E43A1C45A78400B15F48 /* CountdownToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CountdownToday.entitlements; sourceTree = "<group>"; };
 		B9C0519F1BD2FBFE0046AD70 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		B9C051A11BD2FBFE0046AD70 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		B9C051A31BD2FBFE0046AD70 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				B908ECA51BD1AAD7004C1107 /* Assets.xcassets */,
 				B908ECA61BD1AAD7004C1107 /* LaunchScreen.storyboard */,
 				B908ECAA1BD1AAD7004C1107 /* Info.plist */,
+				B9B8E4391C45A77600B15F48 /* Countdown.entitlements */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				B92BD27C1BEAC3A400053B0F /* Info.plist */,
+				B9B8E43A1C45A78400B15F48 /* CountdownToday.entitlements */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -594,6 +598,12 @@
 				TargetAttributes = {
 					B908EC631BD1A9AE004C1107 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = A7492VPDZT;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B908EC771BD1A9AF004C1107 = {
 						CreatedOnToolsVersion = 7.1;
@@ -605,6 +615,12 @@
 					};
 					B92BD2681BEAC28C00053B0F = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = A7492VPDZT;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B9E60F6C1BE819800054172D = {
 						CreatedOnToolsVersion = 7.1;
@@ -908,6 +924,9 @@
 			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Resources/$(TARGET_NAME).entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -917,6 +936,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.Countdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -925,6 +945,9 @@
 			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Resources/$(TARGET_NAME).entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -934,6 +957,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.Countdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -1001,10 +1025,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Resources/$(TARGET_NAME).entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.Countdown.CountdownToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1013,10 +1041,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9C051AC1BD2FBFE0046AD70 /* iOS-Application.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Resources/$(TARGET_NAME).entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliangrosshauser.Countdown.CountdownToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
