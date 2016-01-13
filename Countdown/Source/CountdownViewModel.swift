@@ -38,7 +38,8 @@ public class CountdownViewModel {
     public init(userDefaults: NSUserDefaults) {
         self.userDefaults = userDefaults
 
-        if birthday != nil {
+        if let birthday = birthday {
+            age.value = ageForBirthday(birthday)
             startTimer.apply().start()
         }
 
