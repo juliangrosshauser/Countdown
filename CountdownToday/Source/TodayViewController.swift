@@ -17,6 +17,13 @@ class TodayViewController: UIViewController {
 
     let viewModel: CountdownViewModel
 
+    let ageLabel: UILabel = {
+        let ageLabel = UILabel()
+        ageLabel.translatesAutoresizingMaskIntoConstraints = false
+        ageLabel.textColor = .whiteColor()
+        return ageLabel
+    }()
+
     //MARK: Initialization
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -37,6 +44,15 @@ class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         preferredContentSize = CGSize(width: 0, height: 50)
+        view.addSubview(ageLabel)
+        NSLayoutConstraint(item: ageLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
+        NSLayoutConstraint(item: ageLabel, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
+
+        if viewModel.birthday != nil {
+            ageLabel.text = String(format: "%.12f", viewModel.age.value)
+        } else {
+            ageLabel.text = "Please open Countdown and set birthday"
+        }
     }
 }
 
