@@ -63,4 +63,8 @@ extension TodayViewController: NCWidgetProviding {
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
         completionHandler(.NoData)
     }
+
+    func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+        return UIEdgeInsetsZero
+    }
 }
