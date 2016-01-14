@@ -18,8 +18,8 @@ class CountdownController: UIViewController {
     private let ageLabel: UILabel = {
         let ageLabel = UILabel()
         ageLabel.translatesAutoresizingMaskIntoConstraints = false
-        ageLabel.font = UIFont.monospacedDigitSystemFontOfSize(UIFont.systemFontSize(), weight: UIFontWeightRegular)
         ageLabel.textColor = .blackColor()
+        ageLabel.font = UIFont.monospacedDigitSystemFontOfSize(UIFont.systemFontSize(), weight: UIFontWeightBold)
         ageLabel.textAlignment = .Center
         return ageLabel
     }()
