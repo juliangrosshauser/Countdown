@@ -30,6 +30,8 @@ class CountdownController: UIViewController {
     init(viewModel: CountdownViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "contentSizeCategoryDidChange:", name:
+            UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -59,6 +61,14 @@ class CountdownController: UIViewController {
 
         NSLayoutConstraint(item: ageLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
         NSLayoutConstraint(item: ageLabel, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
+    }
+
+    //MARK: Notification Handlers
+
+    @objc
+    private func contentSizeCategoryDidChange(notification: NSNotification) {
+        let preferredFontSize = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline).pointSize
+        ageLabel.font = UIFont.monospacedDigitSystemFontOfSize(preferredFontSize, weight: UIFontWeightBold)
     }
 
     //MARK: Button Actions
