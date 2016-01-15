@@ -20,6 +20,8 @@ class TodayViewController: UIViewController {
     let ageLabel: UILabel = {
         let ageLabel = UILabel()
         ageLabel.translatesAutoresizingMaskIntoConstraints = false
+        let preferredFontSize = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline).pointSize
+        ageLabel.font = UIFont.monospacedDigitSystemFontOfSize(preferredFontSize, weight: UIFontWeightBold)
         ageLabel.textColor = .whiteColor()
         return ageLabel
     }()
