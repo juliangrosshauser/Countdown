@@ -50,8 +50,8 @@ class TodayViewController: UIViewController {
         NSLayoutConstraint(item: ageLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
         NSLayoutConstraint(item: ageLabel, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
 
-        if viewModel.birthday != nil {
-            ageLabel.text = String(format: "%.12f", viewModel.age.value)
+        if let age = viewModel.age.value {
+            ageLabel.text = String(format: "%.12f", age)
         } else {
             ageLabel.text = "Please open Countdown and set birthday"
         }

@@ -17,7 +17,7 @@ public class CountdownViewModel {
     public static let UserDefaultsSuiteName = "group.com.juliangrosshauser.Countdown"
     private let userDefaults: NSUserDefaults
     private let startTimer: Action<Void, NSDate, NoError> = Action { timer(0.1, onScheduler: QueueScheduler()) }
-    public let age = MutableProperty<Double>(0)
+    public let age = MutableProperty<Double?>(nil)
 
     public var birthday: NSDate? {
         get {
@@ -43,7 +43,13 @@ public class CountdownViewModel {
             startTimer.apply().start()
         }
 
-        age <~ startTimer.values.map { [unowned self] _ in self.ageForBirthday(self.birthday!) }
+        age <~ startTimer.values.map { [unowned self] _ in
+            guard let birthday = self.birthday else {
+                return nil
+            }
+
+            return self.ageForBirthday(birthday)
+        }
     }
 
     //MARK: Age Calculation
