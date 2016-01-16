@@ -61,7 +61,6 @@ class CountdownController: UIViewController {
 
         viewModel.age.producer.filter({ $0 != nil }).observeOn(UIScheduler()).startWithNext { [unowned self] age in
             self.ageLabel.text = String(format: "%.12f", age!)
-            self.ageLabel.sizeToFit()
         }
 
         NSLayoutConstraint(item: ageLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
