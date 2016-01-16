@@ -18,6 +18,7 @@ public class CountdownViewModel {
     private let userDefaults: NSUserDefaults
     public let active = MutableProperty<Bool>(false)
     private let startTimer: Action<Void, NSDate, NoError> = Action { timer(0.1, onScheduler: QueueScheduler()) }
+    private var startTimerDisposable: Disposable?
     public let age = MutableProperty<Double?>(nil)
 
     public var birthday: NSDate? {
@@ -27,10 +28,6 @@ public class CountdownViewModel {
 
         set {
             userDefaults.setObject(newValue, forKey: CountdownViewModel.BirthdayKey)
-
-            if !startTimer.executing.value {
-                startTimer.apply().start()
-            }
         }
     }
 
@@ -41,7 +38,18 @@ public class CountdownViewModel {
 
         if let birthday = birthday {
             age.value = ageForBirthday(birthday)
-            startTimer.apply().start()
+        }
+
+        // Skip initial value
+        active.producer.skip(1).startWithNext { [unowned self] active in
+            if let startTimerDisposable = self.startTimerDisposable {
+                startTimerDisposable.dispose()
+                self.startTimerDisposable = nil
+            }
+
+            if active {
+                self.startTimerDisposable = self.startTimer.apply().start()
+            }
         }
 
         age <~ startTimer.values.map { [unowned self] _ in
