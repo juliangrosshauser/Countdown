@@ -16,6 +16,7 @@ public class CountdownViewModel {
     private static let BirthdayKey = "CountdownBirthdayKey"
     public static let UserDefaultsSuiteName = "group.com.juliangrosshauser.Countdown"
     private let userDefaults: NSUserDefaults
+    public let active = MutableProperty<Bool>(false)
     private let startTimer: Action<Void, NSDate, NoError> = Action { timer(0.1, onScheduler: QueueScheduler()) }
     public let age = MutableProperty<Double?>(nil)
 

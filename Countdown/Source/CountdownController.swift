@@ -42,10 +42,16 @@ class CountdownController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        viewModel.active.value = true
 
         if viewModel.birthday == nil {
             showViewController(UINavigationController(rootViewController: BirthdayController(viewModel: viewModel)), sender: self)
         }
+    }
+
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.active.value = false
     }
 
     override func viewDidLoad() {
