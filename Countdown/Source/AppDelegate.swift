@@ -26,8 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewModel = CountdownViewModel(userDefaults: userDefaults)
         let countdownController = CountdownController(viewModel: viewModel)
         window?.rootViewController = UINavigationController(rootViewController: countdownController)
+        activateTheme()
         window?.makeKeyAndVisible()
         return true
+    }
+
+    private func activateTheme() {
+        UINavigationBar.appearance().barTintColor = .whiteColor()
+        UINavigationBar.appearance().translucent = false
     }
 }
 
