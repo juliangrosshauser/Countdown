@@ -9,6 +9,7 @@
 import UIKit
 import NotificationCenter
 import CountdownKit
+import ReactiveCocoa
 
 @objc(TodayViewController)
 class TodayViewController: UIViewController {
@@ -43,6 +44,16 @@ class TodayViewController: UIViewController {
 
     //MARK: UIViewController
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.active.value = true
+    }
+
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.active.value = false
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         preferredContentSize = CGSize(width: 0, height: 50)
@@ -50,10 +61,12 @@ class TodayViewController: UIViewController {
         NSLayoutConstraint(item: ageLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0).active = true
         NSLayoutConstraint(item: ageLabel, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0).active = true
 
-        if let age = viewModel.age.value {
-            ageLabel.text = String(format: "%.12f", age)
-        } else {
+        if viewModel.age.value == nil {
             ageLabel.text = "Please open Countdown and set birthday"
+        }
+
+        viewModel.age.producer.filter({ $0 != nil }).observeOn(UIScheduler()).startWithNext { [unowned self] age in
+            self.ageLabel.text = String(format: "%.12f", age!)
         }
     }
 }
